@@ -276,47 +276,6 @@ $(function(){
         $(this).next('.accordion__content').slideToggle('fast')
     })
 
-    try{
-        //    Анимированный счетчик цифр
-        var show = true;
-        var countbox = "#counts";
-        $(window).on("scroll load resize", function(){
-            if(!show) return false;
-            if(!$(countbox).length) return false;
-            var w_top = $(window).scrollTop();        
-            var e_top = $(countbox).offset().top;     
-            var w_height = $(window).height();        
-            var d_height = $(document).height();      
-            var e_height = $(countbox).outerHeight(); 
-            if(w_top + 700 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height){
-                $(".spincrement").spincrement({
-                    thousandSeparator: "",
-                    duration: 2000
-                });
-                show = false;
-            }
-        });
-
-        var show__2 = true;
-        var countbox2 = "#counts__2";
-        $(window).on("scroll load resize", function(){
-            if(!show__2) return false;
-            if(!$(countbox2).length) return false;
-            var w_top = $(window).scrollTop();        
-            var e_top = $(countbox2).offset().top;     
-            var w_height = $(window).height();        
-            var d_height = $(document).height();      
-            var e_height = $(countbox2).outerHeight(); 
-            if(w_top + 700 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height){
-                $(".spincrement").spincrement({
-                    thousandSeparator: "",
-                    duration: 2000
-                });
-                show__2 = false;
-            }
-        });
-    } catch (err) {}
-
     // Images lazyload
     (function() {
         function logElementEvent(eventName, element) {

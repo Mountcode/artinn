@@ -484,6 +484,7 @@ html {
   min-height: 101vh;
   background-size: cover;
   background-attachment: fixed;
+  background: red!important;
 }
 mark {
   background: none;
